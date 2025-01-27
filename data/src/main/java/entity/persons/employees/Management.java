@@ -1,5 +1,6 @@
 package entity.persons.employees;
 
+import entity.BaseCatalog;
 import entity.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -12,6 +13,6 @@ import lombok.Setter;
 @Entity
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-public class Management extends BaseEntity {
+public class Management extends BaseCatalog {
 
 }

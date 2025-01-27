@@ -1,5 +1,6 @@
 package entity.persons.access;
 
+import entity.BaseCatalog;
 import entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,10 +14,7 @@ import java.util.Set;
 @Table
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
-public class Role extends BaseEntity {
-
-    @Column
-    String name;
+public class Role extends BaseCatalog {
 
     @ManyToMany
     @JoinTable(name = "access_context_to_role",

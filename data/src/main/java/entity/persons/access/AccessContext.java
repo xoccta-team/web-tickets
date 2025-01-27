@@ -1,5 +1,6 @@
 package entity.persons.access;
 
+import entity.BaseCatalog;
 import entity.BaseEntity;
 import enums.AccessType;
 import jakarta.persistence.Column;
@@ -16,7 +17,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AccessContext extends BaseEntity {
+public class AccessContext extends BaseCatalog {
 
     @Column(name = "element")
     String elementName;
