@@ -1,4 +1,4 @@
-package entity.persons.employees;
+package entity.catalogs;
 
 import entity.BaseCatalog;
 import jakarta.persistence.Entity;
@@ -8,9 +8,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
 @Table
-@Getter @Setter
-@AllArgsConstructor @NoArgsConstructor
-public class Position extends BaseCatalog {
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class NewsCategory extends BaseCatalog {
 }

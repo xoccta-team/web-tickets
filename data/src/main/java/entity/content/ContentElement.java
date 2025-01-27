@@ -25,12 +25,4 @@ public class ContentElement extends BaseEntity{
     @Column
     protected String title;
 
-    @Column
-    protected String link;
-
-    @PrePersist
-    public void convertNameToLink() {
-        // ToDo: rework
-        setLink(getTitle());
-    }
 }

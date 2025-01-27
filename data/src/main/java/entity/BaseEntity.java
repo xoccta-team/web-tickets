@@ -22,13 +22,13 @@ public class BaseEntity implements Serializable {
     @Column(name = "entity_updated")
     protected Date updated;
 
-    @PostPersist
+    @PrePersist
     public void onCreate() {
         setCreated(new Date());
         setUpdated(getCreated());
     }
 
-    @PostUpdate
+    @PreUpdate
     public void onUpdate() {
         setUpdated(new Date());
     }

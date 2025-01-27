@@ -1,9 +1,10 @@
-package entity.content.news;
+package entity.content.gallery;
 
+import entity.catalogs.PhotosCategory;
 import entity.content.ContentElement;
-import entity.catalogs.NewsCategory;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
@@ -12,17 +13,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
 @Table
+@Entity
 @Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
-public class News extends ContentElement {
+@AllArgsConstructor @NoArgsConstructor
+public class Photo extends ContentElement {
 
     @Column
-    String content;
+    String path;
 
-    @ManyToOne
-    @JoinColumn(name = "news_category_id")
-    NewsCategory category;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    PhotosCategory category;
 
 }
